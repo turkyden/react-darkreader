@@ -1,9 +1,15 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
-  title: 'react-darkmode',
-  favicon: 'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
-  logo: 'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
+  title: 'rc-darkreader',
+  favicon: 'https://turkyden.com/img/logo.svg',
+  logo: 'https://turkyden.com/img/logo.svg',
+  hash: true,
   outputPath: 'docs-dist',
+  base: `/react-darkreader/`,
+  publicPath:
+    process.env.NODE_ENV === 'production'
+      ? 'https://cdn.jsdelivr.net/gh/turkyden/react-darkreader@gh-pages/'
+      : '/',
   // more config: https://d.umijs.org/config
 });

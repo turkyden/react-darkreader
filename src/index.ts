@@ -1,1 +1,1 @@
-export { default as useDarkmode } from '@/use-darkmode';
+export { default as useDarkreader } from '@/hook';
