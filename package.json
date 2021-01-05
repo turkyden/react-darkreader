@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "private": false,
   "name": "react-darkreader",
   "version": "1.0.0",
   "scripts": {
