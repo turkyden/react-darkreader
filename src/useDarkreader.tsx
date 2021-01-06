@@ -5,6 +5,7 @@ import {
   disable as disableDarkMode,
   auto as followSystemColorScheme,
   exportGeneratedCSS as collectCSS,
+  setFetchMethod,
 } from 'darkreader';
 import { getTargetElement, BasicTarget } from './dom';
 
@@ -33,6 +34,9 @@ export default function useDarkreader(
   const [isDark, setIsDark] = useState(defaultDarken);
 
   useEffect(() => {
+
+    setFetchMethod(window.fetch);
+
     isDark
       ? enableDarkMode({
           brightness,
