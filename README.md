@@ -5,7 +5,7 @@ Darkmode ui component/hook for react inspired by [darkreader](https://github.com
 [![npm](https://img.shields.io/npm/v/react-darkreader?color=orange)](https://www.npmjs.com/package/react-image-dangling)&nbsp;
 [![dumi](https://img.shields.io/badge/docs%20by-dumi-blue)](https://github.com/umijs/dumi)&nbsp;
 [![jsdelivr](https://data.jsdelivr.com/v1/package/npm/react-darkreader/badge)](https://www.jsdelivr.com/package/npm/react-darkreader)&nbsp;
-![License](https://img.shields.io/npm/l/react-darkreader?style=flat-square&color=red)&nbsp;
+![License](https://img.shields.io/github/license/Turkyden/react-darkreader)&nbsp;
 
 ## 📦 Install
 
@@ -28,7 +28,7 @@ import React from 'react';
 import Darkreader from 'react-darkreader';
 
 export default () => {
-  return <Darkreader defaultDarken />;
+  return <Darkreader />;
 };
 ```
 

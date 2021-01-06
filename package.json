@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "ahooks": "^2.9.3",
+    "antd": "^4.10.0",
     "darkreader": "^4.9.26",
     "husky": "^4.3.6",
     "react": "^16.12.0"
