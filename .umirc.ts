@@ -7,9 +7,11 @@ export default defineConfig({
   outputPath: 'docs-dist',
   base: `/react-darkreader/`,
   publicPath:
-    process.env.NODE_ENV === 'production'
-      ? 'https://cdn.jsdelivr.net/gh/turkyden/react-darkreader@gh-pages/'
-      : '/',
+    process.env.NODE_ENV === 'production' ? '/react-darkreader/' : '/',
+  // publicPath:
+  //   process.env.NODE_ENV === 'production'
+  //     ? 'https://cdn.jsdelivr.net/gh/turkyden/react-darkreader@gh-pages/'
+  //     : '/',
   // more config: https://d.umijs.org/config
   theme: {
     '@c-primary': '#8B5CF6',
