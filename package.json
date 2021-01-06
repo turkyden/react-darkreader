@@ -1,7 +1,23 @@
 {
-  "private": false,
   "name": "react-darkreader",
   "version": "1.1.0",
+  "description": "Darkmode ui component/hook for react",
+  "keywords": [
+    "react",
+    "react-component",
+    "react-darkreader",
+    "darkreader",
+    "darkmode"
+  ],
+  "homepage": "http://github.com/Turkyden/react-darkreader",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Turkyden/react-darkreader.git"
+  },
+  "bugs": {
+    "url": "http://github.com/Turkyden/react-darkreader/issues"
+  },
+  "license": "MIT",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",

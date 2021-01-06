@@ -2,7 +2,8 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   title: 'rc-darkreader',
-  favicon: 'https://turkyden.com/img/logo.svg',
+  logo: '/logo.svg',
+  favicon: '/logo.svg',
   hash: true,
   outputPath: 'docs-dist',
   base: `/react-darkreader/`,
@@ -22,7 +23,6 @@ export default defineConfig({
     }`,
   ],
   styles: [
-    'https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/utilities.min.css',
     `/** Logo Style **/
     .__dumi-default-menu-header .__dumi-default-menu-logo{
       background: none !important;

@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Switch.css';
 import useDarkreader, { Options } from './useDarkreader';
 import Switch from './Switch';
 
-export default function Darkreader (defaultDarken: boolean, options: Options) {
+export interface DarkreaderProps {
+  defaultDarken: boolean;
+  options?: Options;
+}
 
-  const [isDark, toggle] = useDarkreader(defaultDarken, options);
+export default function Darkreader({
+  defaultDarken = false,
+  options,
+}: DarkreaderProps) {
+  const [isDark, toggle] = useDarkreader(defaultDarken);
 
-  return (
-    <Switch isDark={isDark} onClick={toggle} />
-  )
+  return <Switch isDark={isDark} onClick={toggle} />;
 }

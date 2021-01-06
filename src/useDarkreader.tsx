@@ -10,31 +10,26 @@ import {
 import { getTargetElement, BasicTarget } from './dom';
 
 export type Options = {
-  brightness?: number,
-  contrast?: number,
-  sepia?: number,
-  target?: BasicTarget
+  brightness?: number;
+  contrast?: number;
+  sepia?: number;
+  target?: BasicTarget;
 };
 
 const defaultOptions = {
   brightness: 100,
   contrast: 90,
   sepia: 10,
-  target: document.body
+  target: document.body,
 };
 
 export default function useDarkreader(
   defaultDarken: boolean = false,
-  {
-    brightness,
-    contrast,
-    sepia,
-  }: Options = defaultOptions,
+  { brightness, contrast, sepia }: Options = defaultOptions,
 ): [boolean, () => void] {
   const [isDark, setIsDark] = useState(defaultDarken);
 
   useEffect(() => {
-
     setFetchMethod(window.fetch);
 
     isDark
@@ -54,7 +49,7 @@ export default function useDarkreader(
 
   useUnmount(() => {
     disableDarkMode();
-  })
+  });
 
   const toggle = () => setIsDark(isDark => !isDark);
 

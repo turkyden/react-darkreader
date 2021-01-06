@@ -1,11 +1,11 @@
 # Getting Started
 
+Darkmode ui component/hook for react inspired by [darkreader](https://github.com/darkreader/darkreader)
+
 [![npm](https://img.shields.io/npm/v/react-darkreader?color=orange)](https://www.npmjs.com/package/react-image-dangling)&nbsp;
 [![dumi](https://img.shields.io/badge/docs%20by-dumi-blue)](https://github.com/umijs/dumi)&nbsp;
 [![jsdelivr](https://data.jsdelivr.com/v1/package/npm/react-darkreader/badge)](https://www.jsdelivr.com/package/npm/react-darkreader)&nbsp;
 ![License](https://img.shields.io/npm/l/react-darkreader?style=flat-square&color=red)&nbsp;
-
-An darkreader cpmponent deved with react. Inspire by the [darkreader](https://github.com/darkreader/darkreader)
 
 ## 📦 Install
 
@@ -28,9 +28,7 @@ import React from 'react';
 import Darkreader from 'react-darkreader';
 
 export default () => {
-  return (
-    <Darkreader defaultDarken />
-  );
+  return <Darkreader defaultDarken />;
 };
 ```
 
@@ -43,9 +41,7 @@ import { Switch, useDarkreader } from 'react-darkreader';
 export default () => {
   const [isDark, toggle] = useDarkreader(false);
 
-  return (
-    <Switch isDark={isDark} onClick={toggle} />
-  );
+  return <Switch isDark={isDark} onClick={toggle} />;
 };
 ```
 
@@ -74,25 +70,25 @@ const [isDark, toggle] = useDarkreader(defaultDarken: boolean, options?: Options
 
 ### Result
 
-| Params    | Description         | Type                                                 |
-|---------|--------------|------------------------------------------------------|
-| isDark  | The status of current darkmode, support `unset`, `loading`, `ready`, `error` | `string` |
-| toggle  | The function for toggling the external resources | `() => void`  |
+| Params | Description                                                                  | Type         |
+| ------ | ---------------------------------------------------------------------------- | ------------ |
+| isDark | The status of current darkmode, support `unset`, `loading`, `ready`, `error` | `string`     |
+| toggle | The function for toggling the external resources                             | `() => void` |
 
 ### Params
 
-| Params     | Description                                  | Type     | Default |
-|------------|----------------------------------------------|----------|---------|
-| defaultDarken       | The url of the external resources           | `string` | -       |
+| Params        | Description                       | Type     | Default |
+| ------------- | --------------------------------- | -------- | ------- |
+| defaultDarken | The url of the external resources | `string` | -       |
 
 ### Options
 
-| Params     | Description                                  | Type     | Default |
-|------------|----------------------------------------------|----------|---------|
-| brightness | The brightness properties of darkmode | `boolean` | true       |
-| contrast | The contrast properties of darkmode, support `all`/`screen`/`print`/`handheld` | `string` | all       |
-| sepia | The sepia properties of darkmode | `HTMLElement` \| `(() => HTMLElement)` \| `MutableRefObject` | -      |
-| target | The DOM or Refs of container which need to load the `<img>` | `HTMLElement` \| `(() => HTMLElement)` \| `MutableRefObject` | -      |
+| Params     | Description                                                                    | Type                                                         | Default |
+| ---------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------ | ------- |
+| brightness | The brightness properties of darkmode                                          | `boolean`                                                    | true    |
+| contrast   | The contrast properties of darkmode, support `all`/`screen`/`print`/`handheld` | `string`                                                     | all     |
+| sepia      | The sepia properties of darkmode                                               | `HTMLElement` \| `(() => HTMLElement)` \| `MutableRefObject` | -       |
+| target     | The DOM or Refs of container which need to load the `<img>`                    | `HTMLElement` \| `(() => HTMLElement)` \| `MutableRefObject` | -       |
 
 ### 🔢 Coming Soon
 

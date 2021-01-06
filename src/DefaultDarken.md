@@ -1,4 +1,4 @@
-## Darkreader
+## DefaultDarken
 
 You can define your darkmode with any thing.
 
@@ -7,7 +7,7 @@ import React from 'react';
 import Darkreader from 'react-darkreader';
 
 export default () => {
-  return <Darkreader />;
+  return <Darkreader defaultDarken />;
 };
 ```
 
