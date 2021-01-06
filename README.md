@@ -21,43 +21,49 @@ npm install react-darkreader
 
 ## 🚀 Usage
 
-```jsx | pure
+You can define your darkmode with any thing.
+
+```tsx | pure
 import React from 'react';
-import Switch, { useDarkreader } from 'react-darkreader';
+import Darkreader from 'react-darkreader';
 
 export default () => {
-  const [isDark, toggle] = useDarkreader(ref);
+  return (
+    <Darkreader/>
+  );
+};
+```
+
+You can define your darkmode with any thing.
+
+```tsx | pure
+import React from 'react';
+import { Switch, useDarkreader } from 'react-darkreader';
+
+export default () => {
+  const [isDark, toggle] = useDarkreader(false);
 
   return (
-    <>
-      <Switch isDark={isDark} onChange={toggle} />
-      <div ref={ref}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt
-        vehicula mi, sed cursus dui pharetra quis.
-      </div>
-    </>
+    <Switch isDark={isDark} onClick={toggle} />
   );
 };
 ```
 
 or you can created by the React Hook `useIcon`
 
-```jsx | pure
-import React from 'react';
+```tsx | pure
+import React, { useEffect, useState } from 'react';
 import { useDarkreader } from 'react-darkreader';
 
 export default () => {
-  const [isDark, toggle] = useDarkreader(ref);
+  const [isDark, toggle] = useDarkreader(false);
 
   return (
-    <>
-      <button onClick={toggle}>{isDark ? "🌜" : "🌞"}<button>
-      <div ref={ref}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vehicula mi, sed cursus dui pharetra quis.
-      </div>
-    </>
-  )
-}
+    <button type="button" onClick={toggle}>
+      Switch Theme {isDark ? '🌜' : '🌞'}
+    </button>
+  );
+};
 ```
 
 ## 📔 API

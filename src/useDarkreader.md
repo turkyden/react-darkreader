@@ -1,4 +1,4 @@
-## Default
+## useDarkreader
 
 You can define your darkmode with any thing.
 
@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react';
 import { useDarkreader } from 'react-darkreader';
 
 export default () => {
-  const [isDark, toggle] = useDarkreader(document.querySelector('body'), {});
+  const [isDark, toggle] = useDarkreader(false);
 
   return (
     <button type="button" onClick={toggle}>

@@ -1,0 +1,54 @@
+:root{
+  --light-slide: #000;
+  --light-slider: #fff;
+  --light-slide-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  --light-slider-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  --dark-slide: #fff;
+  --dark-slider: #000;
+  --dark-slide-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  --dark-slider-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+.slide{
+  width: 80px;
+  height: 40px;
+  background: var(--light-slide);
+  box-shadow: var(--light-slide-shadow);
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.slide::after{
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 5px;
+  width: 30px;
+  height: calc(100% - 10px);
+  background: var(--light-slider);
+  box-shadow: var(--light-slider-shadow);
+  border-radius: 100px;
+  transition: all 250ms ease-in-out;
+  transform: translate(0%);
+}
+
+.container.toggleBg{
+  background: var(--dark-bg);
+}
+
+.container.toggleBg h1{
+  color: var(--dark-slide);
+}
+
+.slide.toggle{
+  background: var(--dark-slide);
+  box-shadow: var(--dark-slide-shadow);
+}
+
+.slide.toggle::after{
+  transform: translate(130%);
+  background: var(--dark-slider);
+  box-shadow: var(--dark-slider-shadow);
+}
