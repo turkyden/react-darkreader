@@ -23,14 +23,14 @@ const defaultOptions = {
 };
 
 export default function useDarkreader(
-  initalStatus: boolean = false,
+  defaultDarken: boolean = false,
   {
     brightness,
     contrast,
     sepia,
   }: Options = defaultOptions,
 ): [boolean, () => void] {
-  const [isDark, setIsDark] = useState(initalStatus);
+  const [isDark, setIsDark] = useState(defaultDarken);
 
   useEffect(() => {
     isDark
@@ -54,10 +54,10 @@ export default function useDarkreader(
 
   const toggle = () => setIsDark(isDark => !isDark);
 
-  const action = {
-    toggle: () => setIsDark(isDark => !isDark),
-    collectCSS: async () => await collectCSS()
-  }
+  // const action = {
+  //   toggle: () => setIsDark(isDark => !isDark),
+  //   collectCSS: async () => await collectCSS()
+  // }
 
   return [isDark, () => setIsDark(prevState => !prevState)];
 }

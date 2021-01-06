@@ -29,7 +29,7 @@ import Darkreader from 'react-darkreader';
 
 export default () => {
   return (
-    <Darkreader/>
+    <Darkreader defaultDarken />
   );
 };
 ```
@@ -68,13 +68,31 @@ export default () => {
 
 ## 📔 API
 
-| Params   | Description                                                                                    | Type                                                         | Default |
-| -------- | :--------------------------------------------------------------------------------------------- | :----------------------------------------------------------- | :------ |
-| type     | The media properties of extarnal resources `<link>`, support `all`/`screen`/`print`/`handheld` | `string`                                                     | all     |
-| src      | The async properties of extarnal resources `<script>`                                          | `string`                                                     | 'ai'    |
-| size     | The DOM or Refs of container which need to load the `<img>`                                    | `HTMLElement` \| `(() => HTMLElement)` \| `MutableRefObject` | -       |
-| interval | The DOM or Refs of container which need to load the `<img>`                                    | `HTMLElement` \| `(() => HTMLElement)` \| `MutableRefObject` | -       |
-| frame    | The DOM or Refs of container which need to load the `<img>`                                    | `HTMLElement` \| `(() => HTMLElement)` \| `MutableRefObject` | 20      |
+```typescript | pure
+const [isDark, toggle] = useDarkreader(defaultDarken: boolean, options?: Options);
+```
+
+### Result
+
+| Params    | Description         | Type                                                 |
+|---------|--------------|------------------------------------------------------|
+| isDark  | The status of current darkmode, support `unset`, `loading`, `ready`, `error` | `string` |
+| toggle  | The function for toggling the external resources | `() => void`  |
+
+### Params
+
+| Params     | Description                                  | Type     | Default |
+|------------|----------------------------------------------|----------|---------|
+| defaultDarken       | The url of the external resources           | `string` | -       |
+
+### Options
+
+| Params     | Description                                  | Type     | Default |
+|------------|----------------------------------------------|----------|---------|
+| brightness | The brightness properties of darkmode | `boolean` | true       |
+| contrast | The contrast properties of darkmode, support `all`/`screen`/`print`/`handheld` | `string` | all       |
+| sepia | The sepia properties of darkmode | `HTMLElement` \| `(() => HTMLElement)` \| `MutableRefObject` | -      |
+| target | The DOM or Refs of container which need to load the `<img>` | `HTMLElement` \| `(() => HTMLElement)` \| `MutableRefObject` | -      |
 
 ### 🔢 Coming Soon
 

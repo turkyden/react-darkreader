@@ -8,7 +8,7 @@ import Darkreader from 'react-darkreader';
 
 export default () => {
   return (
-    <Darkreader/>
+    <Darkreader defaultDarken />
   );
 };
 ```
