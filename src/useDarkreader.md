@@ -7,12 +7,24 @@ import React, { useEffect, useState } from 'react';
 import { useDarkreader } from 'react-darkreader';
 
 export default () => {
-  const [isDark, toggle] = useDarkreader(false);
+  const [isDark, toggle, collectCSS] = useDarkreader(false);
+
+  const logCSS = async () => {
+    const CSS = await collectCSS();
+    console.log(CSS);
+  };
 
   return (
-    <button type="button" onClick={toggle}>
-      Switch Theme {isDark ? '🌜' : '🌞'}
-    </button>
+    <>
+      <button type="button" onClick={toggle}>
+        Switch Theme {isDark ? '🌜' : '🌞'}
+      </button>
+      <br />
+      <br />
+      <button type="button" onClick={logCSS}>
+        CollectCSS
+      </button>
+    </>
   );
 };
 ```

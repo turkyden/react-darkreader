@@ -26,7 +26,7 @@ const defaultOptions = {
 export default function useDarkreader(
   defaultDarken: boolean = false,
   { brightness, contrast, sepia }: Options = defaultOptions,
-): [boolean, () => void] {
+): [boolean, () => void, () => Promise<string>] {
   const [isDark, setIsDark] = useState(defaultDarken);
 
   useEffect(() => {
@@ -58,5 +58,5 @@ export default function useDarkreader(
   //   collectCSS: async () => await collectCSS()
   // }
 
-  return [isDark, () => setIsDark(prevState => !prevState)];
+  return [isDark, () => setIsDark(prevState => !prevState), collectCSS];
 }
