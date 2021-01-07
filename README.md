@@ -1,6 +1,6 @@
 # Getting Started
 
-Darkmode ui component/hook for react inspired by [darkreader](https://github.com/darkreader/darkreader)
+Darkmode ui component/hook for react inspired by [darkreader](https://github.com/darkreader/darkreader).
 
 [![npm](https://img.shields.io/npm/v/react-darkreader?color=orange)](https://www.npmjs.com/package/react-image-dangling)&nbsp;
 [![dumi](https://img.shields.io/badge/docs%20by-dumi-blue)](https://github.com/umijs/dumi)&nbsp;
@@ -21,18 +21,16 @@ npm install react-darkreader
 
 ## 🚀 Usage
 
-You can define your darkmode with any thing.
+You can import the darkmode as a react component.
 
 ```tsx | pure
 import React from 'react';
 import Darkreader from 'react-darkreader';
 
-export default () => {
-  return <Darkreader />;
-};
+export default () => <Darkreader />;
 ```
 
-You can define your darkmode with any thing.
+You can also create darkmode by the react hook `useDarkreader`
 
 ```tsx | pure
 import React from 'react';
@@ -45,7 +43,7 @@ export default () => {
 };
 ```
 
-or you can created by the React Hook `useIcon`
+And you can customize your Switch Button UI with anything.
 
 ```tsx | pure
 import React, { useEffect, useState } from 'react';
@@ -64,6 +62,22 @@ export default () => {
 
 ## 📔 API
 
+### Component
+
+```tsx | pure
+<Darkreader 
+  defaultDarken
+  options={
+    brightness: 100,
+    contrast: 90,
+    sepia: 10,
+    target: document.body
+  }
+/>
+```
+
+### Hook
+
 ```typescript | pure
 const [isDark, toggle] = useDarkreader(defaultDarken: boolean, options?: Options);
 ```
@@ -72,27 +86,27 @@ const [isDark, toggle] = useDarkreader(defaultDarken: boolean, options?: Options
 
 | Params | Description                                                                  | Type         |
 | ------ | ---------------------------------------------------------------------------- | ------------ |
-| isDark | The status of current darkmode, support `unset`, `loading`, `ready`, `error` | `string`     |
-| toggle | The function for toggling the external resources                             | `() => void` |
+| isDark | The status of current darkmode, support `true`, `false`| `boolean` |
+| toggle | The function for toggling the darkmode.    | `() => void` |
 
 ### Params
 
 | Params        | Description                       | Type     | Default |
 | ------------- | --------------------------------- | -------- | ------- |
-| defaultDarken | The url of the external resources | `string` | -       |
+| defaultDarken | The default status of the darkreader | `boolean` | false       |
 
 ### Options
 
 | Params     | Description                                                                    | Type                                                         | Default |
 | ---------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------ | ------- |
-| brightness | The brightness properties of darkmode                                          | `boolean`                                                    | true    |
-| contrast   | The contrast properties of darkmode, support `all`/`screen`/`print`/`handheld` | `string`                                                     | all     |
-| sepia      | The sepia properties of darkmode                                               | `HTMLElement` \| `(() => HTMLElement)` \| `MutableRefObject` | -       |
-| target     | The DOM or Refs of container which need to load the `<img>`                    | `HTMLElement` \| `(() => HTMLElement)` \| `MutableRefObject` | -       |
+| brightness | The brightness properties of darkmode | `number`  | 100  |
+| contrast   | The contrast properties of darkmode   | `number`  | 90   |
+| sepia      | The sepia properties of darkmode      | `number`  | 10   |
+| target     | The container (DOM or Refs)  which will be injected darkmode theme | `HTMLElement` \| `(() => HTMLElement)` \| `MutableRefObject` | -       |
 
 ### 🔢 Coming Soon
 
-- autoPlay
+- [RFC] followSystemColorScheme
 
 ## 🔨 Contribute
 
