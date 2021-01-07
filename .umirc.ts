@@ -6,9 +6,8 @@ export default defineConfig({
   favicon: 'https://darkreader.org/images/darkreader-icon-256x256.png',
   hash: true,
   outputPath: 'docs-dist',
-  base: `/react-darkreader/`,
-  publicPath:
-    process.env.NODE_ENV === 'production' ? '/react-darkreader/' : '/',
+  base: `/`,
+  publicPath: '/',
   theme: {
     '@c-primary': '#2c89a0',
   },
