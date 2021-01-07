@@ -15,7 +15,7 @@ Darkmode ui component/hook for react inspired by [darkreader](https://github.com
 yarn add react-darkreader
 ```
 
-or you can:
+Or you can:
 
 ```bash
 npm install react-darkreader

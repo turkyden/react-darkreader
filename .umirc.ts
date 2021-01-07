@@ -15,7 +15,7 @@ export default defineConfig({
   //     : '/',
   // more config: https://d.umijs.org/config
   theme: {
-    '@c-primary': '#8B5CF6',
+    '@c-primary': '#2c89a0',
   },
   headScripts: [
     `window.onload = () => {
@@ -32,7 +32,7 @@ export default defineConfig({
       height: 64px;
       position: relative;
       perspective: 50000px;
-      color: #8B5CF6;
+      color: #2c89a0;
     }
     .circles span {
       position: absolute;
