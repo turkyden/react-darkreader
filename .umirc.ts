@@ -8,7 +8,9 @@ export default defineConfig({
   outputPath: 'docs-dist',
   base: `/react-darkreader/`,
   publicPath:
-    process.env.NODE_ENV === 'production' ? '/react-darkreader/' : '/',
+    process.env.NODE_ENV === 'production'
+      ? 'https://cdn.jsdelivr.net/gh/turkyden/react-darkreader@gh-pages/'
+      : '/',
   // publicPath:
   //   process.env.NODE_ENV === 'production'
   //     ? 'https://cdn.jsdelivr.net/gh/turkyden/react-darkreader@gh-pages/'
