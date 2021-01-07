@@ -3,6 +3,7 @@
 Darkmode ui component/hook for react inspired by [darkreader](https://github.com/darkreader/darkreader).
 
 [![npm](https://img.shields.io/npm/v/react-darkreader?color=orange)](https://www.npmjs.com/package/react-image-dangling)&nbsp;
+![npm](https://img.shields.io/npm/dt/react-darkreader)&nbsp;
 [![dumi](https://img.shields.io/badge/docs%20by-dumi-blue)](https://github.com/umijs/dumi)&nbsp;
 [![jsdelivr](https://data.jsdelivr.com/v1/package/npm/react-darkreader/badge)](https://www.jsdelivr.com/package/npm/react-darkreader)&nbsp;
 ![License](https://img.shields.io/github/license/Turkyden/react-darkreader)&nbsp;
