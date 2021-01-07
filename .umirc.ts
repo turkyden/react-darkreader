@@ -2,8 +2,8 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   title: 'rc-darkreader',
-  logo: '/logo.svg',
-  favicon: '/logo.svg',
+  logo: 'https://darkreader.org/images/darkreader-icon-256x256.png',
+  favicon: 'https://darkreader.org/images/darkreader-icon-256x256.png',
   hash: true,
   outputPath: 'docs-dist',
   base: `/react-darkreader/`,

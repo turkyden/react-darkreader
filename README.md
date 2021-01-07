@@ -7,6 +7,10 @@ Darkmode ui component/hook for react inspired by [darkreader](https://github.com
 [![jsdelivr](https://data.jsdelivr.com/v1/package/npm/react-darkreader/badge)](https://www.jsdelivr.com/package/npm/react-darkreader)&nbsp;
 ![License](https://img.shields.io/github/license/Turkyden/react-darkreader)&nbsp;
 
+<p align="center">
+<img src="https://darkreader.org/images/darkreader-icon-256x256.png" >
+</p>
+
 ## 📦 Install
 
 ```bash
