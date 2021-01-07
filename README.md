@@ -1,14 +1,13 @@
 # Getting Started
 
-Darkmode ui component/hook for react inspired by [darkreader](https://github.com/darkreader/darkreader).
+Darkmode ui component/hook for react inspired by [darkreader](https://github.com/darkreader/darkreader)
 
-[![npm](https://img.shields.io/npm/v/react-darkreader?color=orange)](https://www.npmjs.com/package/react-image-dangling)&nbsp;
-![npm](https://img.shields.io/npm/dt/react-darkreader)&nbsp;
-[![dumi](https://img.shields.io/badge/docs%20by-dumi-blue)](https://github.com/umijs/dumi)&nbsp;
-[![jsdelivr](https://data.jsdelivr.com/v1/package/npm/react-darkreader/badge)](https://www.jsdelivr.com/package/npm/react-darkreader)&nbsp;
-![License](https://img.shields.io/github/license/Turkyden/react-darkreader)&nbsp;
-
+[![npm](https://img.shields.io/npm/v/react-darkreader?color=orange)](https://www.npmjs.com/package/react-image-dangling)
+![npm](https://img.shields.io/npm/dt/react-darkreader)
+[![dumi](https://img.shields.io/badge/docs%20by-dumi-blue)](https://github.com/umijs/dumi)
+![License](https://img.shields.io/github/license/Turkyden/react-darkreader)
 ![darkreader](https://darkreader.org/images/darkreader-icon-256x256.png)
+[![jsdelivr](https://data.jsdelivr.com/v1/package/npm/react-darkreader/badge)](https://www.jsdelivr.com/package/npm/react-darkreader)
 
 ## 📦 Install
 
@@ -68,7 +67,7 @@ export default () => {
 ### Component
 
 ```tsx | pure
-<Darkreader 
+<Darkreader
   defaultDarken
   options={
     brightness: 100,
@@ -87,25 +86,25 @@ const [isDark, toggle] = useDarkreader(defaultDarken: boolean, options?: Options
 
 ### Result
 
-| Params | Description                                                                  | Type         |
-| ------ | ---------------------------------------------------------------------------- | ------------ |
-| isDark | The status of current darkmode, support `true`, `false`| `boolean` |
-| toggle | The function for toggling the darkmode.    | `() => void` |
+| Params | Description                                             | Type         |
+| ------ | ------------------------------------------------------- | ------------ |
+| isDark | The status of current darkmode, support `true`, `false` | `boolean`    |
+| toggle | The function for toggling the darkmode.                 | `() => void` |
 
 ### Params
 
-| Params        | Description                       | Type     | Default |
-| ------------- | --------------------------------- | -------- | ------- |
-| defaultDarken | The default status of the darkreader | `boolean` | false       |
+| Params        | Description                          | Type      | Default |
+| ------------- | ------------------------------------ | --------- | ------- |
+| defaultDarken | The default status of the darkreader | `boolean` | false   |
 
 ### Options
 
-| Params     | Description                                                                    | Type                                                         | Default |
-| ---------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------ | ------- |
-| brightness | The brightness properties of darkmode | `number`  | 100  |
-| contrast   | The contrast properties of darkmode   | `number`  | 90   |
-| sepia      | The sepia properties of darkmode      | `number`  | 10   |
-| target     | The container (DOM or Refs)  which will be injected darkmode theme | `HTMLElement` \| `(() => HTMLElement)` \| `MutableRefObject` | -       |
+| Params     | Description                                                       | Type                                                         | Default |
+| ---------- | ----------------------------------------------------------------- | ------------------------------------------------------------ | ------- |
+| brightness | The brightness properties of darkmode                             | `number`                                                     | 100     |
+| contrast   | The contrast properties of darkmode                               | `number`                                                     | 90      |
+| sepia      | The sepia properties of darkmode                                  | `number`                                                     | 10      |
+| target     | The container (DOM or Refs) which will be injected darkmode theme | `HTMLElement` \| `(() => HTMLElement)` \| `MutableRefObject` | -       |
 
 ### 🔢 Coming Soon
 
