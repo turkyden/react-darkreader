@@ -16,10 +16,10 @@ export default function Switch({
       checked={isDark}
       icons={{
         checked: (
-          <span className="react-toggle-icon react-toggle-icon-night">🌜</span>
+          <span className="react-toggle-icon react-toggle-icon-day">🌞</span>
         ),
         unchecked: (
-          <span className="react-toggle-icon react-toggle-icon-day">🌞</span>
+          <span className="react-toggle-icon react-toggle-icon-night">🌜</span>
         ),
       }}
       onChange={onToggle}

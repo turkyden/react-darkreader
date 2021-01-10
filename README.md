@@ -1,14 +1,10 @@
 # Getting Started
 
-Darkmode ui component/hook for react inspired by [darkreader](https://github.com/darkreader/darkreader)
+🌓 A React hook for adding a dark / night mode to your site inspired by [darkreader](https://github.com/darkreader/darkreader)
 
-[![npm](https://img.shields.io/npm/v/react-darkreader?color=orange)](https://www.npmjs.com/package/react-image-dangling)
-![npm](https://img.shields.io/npm/dt/react-darkreader)
-[![dumi](https://img.shields.io/badge/docs%20by-dumi-blue)](https://github.com/umijs/dumi)
-![License](https://img.shields.io/github/license/Turkyden/react-darkreader)
-[![jsdelivr](https://data.jsdelivr.com/v1/package/npm/react-darkreader/badge)](https://www.jsdelivr.com/package/npm/react-darkreader)
+[![npm](https://img.shields.io/npm/v/react-darkreader?color=orange)](https://www.npmjs.com/package/react-image-dangling) ![npm](https://img.shields.io/npm/dt/react-darkreader) [![dumi](https://img.shields.io/badge/docs%20by-dumi-blue)](https://github.com/umijs/dumi) ![License](https://img.shields.io/github/license/Turkyden/react-darkreader) [![jsdelivr](https://data.jsdelivr.com/v1/package/npm/react-darkreader/badge)](https://www.jsdelivr.com/package/npm/react-darkreader)
 
-[Live Demo](https://react-darkreader.vercel.app)
+Live Demo ✨ [https://react-darkreader.vercel.app](https://react-darkreader.vercel.app)
 
 ![darkreader](https://darkreader.org/images/darkreader-icon-256x256.png)
 
@@ -45,23 +41,6 @@ export default () => {
   const [isDark, toggle] = useDarkreader(false);
 
   return <Switch isDark={isDark} onToggle={toggle} />;
-};
-```
-
-And you can customize your Switch Button UI with anything.
-
-```tsx | pure
-import React, { useEffect, useState } from 'react';
-import { useDarkreader } from 'react-darkreader';
-
-export default () => {
-  const [isDark, toggle] = useDarkreader(false);
-
-  return (
-    <button type="button" onClick={toggle}>
-      Switch Theme {isDark ? '🌜' : '🌞'}
-    </button>
-  );
 };
 ```
 
@@ -118,7 +97,9 @@ with a toggle button as ui.
 
 ## 🔢 Coming Soon
 
-- [RFC] followSystemColorScheme
+- [ ] followSystemColorScheme
+- [ ] localstorge
+- [ ] playground for editing the config online
 
 ## 🔨 Contribute
 
@@ -148,4 +129,4 @@ $ npm run build
 
 ## License
 
-MIT
+[MIT](https://github.com/Turkyden/react-darkreader/blob/main/LICENSE)

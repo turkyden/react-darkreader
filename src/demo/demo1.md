@@ -1,6 +1,6 @@
 ## Darkreader
 
-You can define your darkmode with any thing.
+You can import to your app with default export.
 
 ```tsx
 import React from 'react';
@@ -10,5 +10,3 @@ export default () => {
   return <Darkreader />;
 };
 ```
-
-More skills for writing demo: https://d.umijs.org/guide/demo-principle

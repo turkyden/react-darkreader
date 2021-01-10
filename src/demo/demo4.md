@@ -1,6 +1,6 @@
 ## Switch
 
-You can define your darkmode with any thing.
+Defaultly, you can define your toggler ui with `<Switch>`.
 
 ```tsx
 import React from 'react';
@@ -13,7 +13,7 @@ export default () => {
 };
 ```
 
-Or you can use the switch trigger with [Ant Design](https://ant.design/components/switch-cn/)
+Or you can import the switch trigger from [Ant Design](https://ant.design/components/switch-cn/)
 
 ```tsx
 import React from 'react';
