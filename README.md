@@ -8,6 +8,8 @@ Darkmode ui component/hook for react inspired by [darkreader](https://github.com
 ![License](https://img.shields.io/github/license/Turkyden/react-darkreader)
 [![jsdelivr](https://data.jsdelivr.com/v1/package/npm/react-darkreader/badge)](https://www.jsdelivr.com/package/npm/react-darkreader)
 
+[Live Demo](https://react-darkreader.vercel.app)
+
 ![darkreader](https://darkreader.org/images/darkreader-icon-256x256.png)
 
 ## 📦 Install
@@ -42,7 +44,7 @@ import { Switch, useDarkreader } from 'react-darkreader';
 export default () => {
   const [isDark, toggle] = useDarkreader(false);
 
-  return <Switch isDark={isDark} onClick={toggle} />;
+  return <Switch isDark={isDark} onToggle={toggle} />;
 };
 ```
 
@@ -82,15 +84,22 @@ export default () => {
 ### Hook
 
 ```typescript | pure
-const [isDark, toggle] = useDarkreader(defaultDarken: boolean, options?: Options);
+const [isDark, toggle, collectCSS] = useDarkreader(defaultDarken: boolean, options?: Options);
+```
+
+with a toggle button as ui.
+
+```tsx | pure
+<Switch isDark={isDark} onToggle={toggle} />
 ```
 
 ### Result
 
-| Params | Description                                             | Type         |
-| ------ | ------------------------------------------------------- | ------------ |
-| isDark | The status of current darkmode, support `true`, `false` | `boolean`    |
-| toggle | The function for toggling the darkmode.                 | `() => void` |
+| Params     | Description                                             | Type                          |
+| ---------- | ------------------------------------------------------- | ----------------------------- |
+| isDark     | The status of current darkmode, support `true`, `false` | `boolean`                     |
+| toggle     | The function for toggling the darkmode.                 | `() => void`                  |
+| collectCSS | The async function for collecting the css of darkmode.  | `async () => Promise<string>` |
 
 ### Params
 
@@ -107,7 +116,7 @@ const [isDark, toggle] = useDarkreader(defaultDarken: boolean, options?: Options
 | sepia      | The sepia properties of darkmode                                  | `number`                                                     | 10      |
 | target     | The container (DOM or Refs) which will be injected darkmode theme | `HTMLElement` \| `(() => HTMLElement)` \| `MutableRefObject` | -       |
 
-### 🔢 Coming Soon
+## 🔢 Coming Soon
 
 - [RFC] followSystemColorScheme
 

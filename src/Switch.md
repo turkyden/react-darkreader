@@ -9,7 +9,7 @@ import { Switch, useDarkreader } from 'react-darkreader';
 export default () => {
   const [isDark, toggle] = useDarkreader(false);
 
-  return <Switch isDark={isDark} onClick={toggle} />;
+  return <Switch isDark={isDark} onToggle={toggle} />;
 };
 ```
 
@@ -19,7 +19,6 @@ Or you can use the switch trigger with [Ant Design](https://ant.design/component
 import React from 'react';
 import { useDarkreader } from 'react-darkreader';
 import { Switch } from 'antd';
-import 'antd/es/switch/style/index.css';
 
 export default () => {
   const [isDark, toggle] = useDarkreader(false);
@@ -29,12 +28,7 @@ export default () => {
       <Switch checked={isDark} onChange={toggle} />
       <br />
       <br />
-      <Switch
-        checkedChildren="🌞"
-        unCheckedChildren="🌜"
-        checked={isDark}
-        onChange={toggle}
-      />
+      <Switch checked={isDark} onChange={toggle} size="small" />
     </>
   );
 };

@@ -1,20 +1,28 @@
 import React from 'react';
+import Toggle from 'react-toggle';
 import './Switch.css';
 
-interface Switch {
-  isDark: boolean,
-  size?: string,
-  border?: string,
-  onClick: () => void
+export interface Switch {
+  isDark: boolean;
+  onToggle: () => void;
 }
 
-export default function Switch ({
+export default function Switch({
   isDark = false,
-  onClick
+  onToggle = () => {},
 }: Switch) {
-  const className = isDark ? 'slide toggle' : 'slide';
-
   return (
-    <div className={className} onClick={onClick}></div>
-  )
+    <Toggle
+      checked={isDark}
+      icons={{
+        checked: (
+          <span className="react-toggle-icon react-toggle-icon-night">🌜</span>
+        ),
+        unchecked: (
+          <span className="react-toggle-icon react-toggle-icon-day">🌞</span>
+        ),
+      }}
+      onChange={onToggle}
+    />
+  );
 }

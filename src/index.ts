@@ -1,10 +1,5 @@
-import Darkreader from '@/Darkreader';
-import Switch from '@/Switch';
-import useDarkreader from '@/useDarkreader';
+import DarkReader from '@/DarkReader';
 
-export default Darkreader
-
-export {
-  Switch,
-  useDarkreader
-}
+export { default as Switch } from './Switch';
+export { default as useDarkreader } from './useDarkreader';
+export default DarkReader;

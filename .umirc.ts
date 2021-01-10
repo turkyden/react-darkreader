@@ -17,6 +17,7 @@ export default defineConfig({
     }`,
   ],
   styles: [
+    `https://cdn.jsdelivr.net/npm/antd@4.10.0/dist/antd.min.css`,
     `/** Logo Style **/
     .__dumi-default-menu-header .__dumi-default-menu-logo{
       background: none !important;

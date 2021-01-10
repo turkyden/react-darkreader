@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useUnmount } from 'ahooks';
 import {
   enable as enableDarkMode,
@@ -41,22 +41,11 @@ export default function useDarkreader(
       : disableDarkMode();
 
     // followSystemColorScheme();
-
-    // const CSS = await collectCSS();
-
-    // console.log(CSS);
   }, [isDark]);
 
   useUnmount(() => {
     disableDarkMode();
   });
-
-  const toggle = () => setIsDark(isDark => !isDark);
-
-  // const action = {
-  //   toggle: () => setIsDark(isDark => !isDark),
-  //   collectCSS: async () => await collectCSS()
-  // }
 
   return [isDark, () => setIsDark(prevState => !prevState), collectCSS];
 }
