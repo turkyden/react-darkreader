@@ -1,7 +1,7 @@
 {
   "name": "react-darkreader",
   "version": "1.2.0",
-  "description": "Darkmode ui component/hook for react",
+  "description": "A React Hook for adding a dark / night mode to your site inspired by darkreader",
   "keywords": [
     "react",
     "react-component",
