@@ -7,20 +7,17 @@ import {
   exportGeneratedCSS as collectCSS,
   setFetchMethod,
 } from 'darkreader';
-import { getTargetElement, BasicTarget } from './dom';
 
 export type Options = {
   brightness?: number;
   contrast?: number;
   sepia?: number;
-  target?: BasicTarget;
 };
 
 const defaultOptions = {
   brightness: 100,
   contrast: 90,
   sepia: 10,
-  target: document.body,
 };
 
 export default function useDarkreader(

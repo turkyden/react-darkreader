@@ -54,8 +54,7 @@ export default () => {
   options={
     brightness: 100,
     contrast: 90,
-    sepia: 10,
-    target: document.body
+    sepia: 10
   }
 />
 ```
@@ -88,12 +87,11 @@ with a toggle button as ui.
 
 ### Options
 
-| Params     | Description                                                       | Type                                                         | Default |
-| ---------- | ----------------------------------------------------------------- | ------------------------------------------------------------ | ------- |
-| brightness | The brightness properties of darkmode                             | `number`                                                     | 100     |
-| contrast   | The contrast properties of darkmode                               | `number`                                                     | 90      |
-| sepia      | The sepia properties of darkmode                                  | `number`                                                     | 10      |
-| target     | The container (DOM or Refs) which will be injected darkmode theme | `HTMLElement` \| `(() => HTMLElement)` \| `MutableRefObject` | -       |
+| Params     | Description                           | Type     | Default |
+| ---------- | ------------------------------------- | -------- | ------- |
+| brightness | The brightness properties of darkmode | `number` | 100     |
+| contrast   | The contrast properties of darkmode   | `number` | 90      |
+| sepia      | The sepia properties of darkmode      | `number` | 10      |
 
 ## 🔢 Coming Soon
 
