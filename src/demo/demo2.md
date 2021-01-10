@@ -1,6 +1,6 @@
 ## defaultDarken
 
-You set the defaultDarken properties to control status at first time.
+You can set the defaultDarken properties to control status at first time.
 
 ```tsx
 import React from 'react';
