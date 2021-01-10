@@ -1,5 +1,5 @@
-import DarkReader from './DarkReader';
+import Darkreader from './Darkreader';
 
 export { default as Switch } from './Switch';
 export { default as useDarkreader } from './useDarkreader';
-export default DarkReader;
+export default Darkreader;
