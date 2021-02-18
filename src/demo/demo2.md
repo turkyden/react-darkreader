@@ -3,6 +3,9 @@
 You can set the defaultDarken properties to control status at first time.
 
 ```tsx
+/**
+ * defaultShowCode: true
+ */
 import React from 'react';
 import Darkreader from 'react-darkreader';
 
