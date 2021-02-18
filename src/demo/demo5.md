@@ -3,6 +3,9 @@
 And you can export the CSS of darkmode with `collectCSS` action.
 
 ```tsx
+/**
+ * defaultShowCode: true
+ */
 import React, { useState } from 'react';
 import { Switch, useDarkreader } from 'react-darkreader';
 
