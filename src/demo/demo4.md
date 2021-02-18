@@ -3,6 +3,9 @@
 Defaultly, you can define your toggler ui with `<Switch>`.
 
 ```tsx
+/**
+ * defaultShowCode: true
+ */
 import React from 'react';
 import { Switch, useDarkreader } from 'react-darkreader';
 
