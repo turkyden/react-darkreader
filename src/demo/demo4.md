@@ -19,6 +19,9 @@ export default () => {
 Or you can import the switch trigger from [Ant Design](https://ant.design/components/switch-cn/)
 
 ```tsx
+/**
+ * defaultShowCode: true
+ */
 import React from 'react';
 import { useDarkreader } from 'react-darkreader';
 import { Switch } from 'antd';
