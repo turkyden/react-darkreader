@@ -3,6 +3,9 @@
 You can define your darkmode with any thing.
 
 ```tsx
+/**
+ * defaultShowCode: true
+ */
 import React from 'react';
 import { useDarkreader } from 'react-darkreader';
 
