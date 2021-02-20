@@ -37,7 +37,7 @@ export default function useDarkreader(
         })
       : disableDarkMode();
 
-    // followSystemColorScheme();
+    // TODO: followSystemColorScheme();
   }, [isDark]);
 
   useUnmount(() => {

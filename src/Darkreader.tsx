@@ -3,7 +3,7 @@ import useDarkreader, { Options } from './useDarkreader';
 import Switch from './Switch';
 
 export interface DarkreaderProps {
-  defaultDarken: boolean;
+  defaultDarken?: boolean;
   options?: Options;
 }
 
