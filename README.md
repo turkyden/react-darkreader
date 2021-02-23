@@ -3,8 +3,6 @@
 </p>
 <h1 align="center">React Darkreader</h1>
 
----
-
 <p align="center">🌓 A React Hook for adding a dark / night mode to your site inspired by <a href="https://github.com/darkreader/darkreader" target="_blank">darkreader</a>
 </p>
 
