@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import '@testing-library/jest-dom'
-import {render, fireEvent, screen} from '@testing-library/react'
-import { renderHook } from '@testing-library/react-hooks/dom/pure'
+import React, { useState } from 'react';
+import '@testing-library/jest-dom';
+import { render, fireEvent, screen } from '@testing-library/react';
+import { renderHook } from '@testing-library/react-hooks/dom/pure';
 import Switch from '../Switch';
 
 test('shows status when the switch is checked', () => {
@@ -11,7 +11,7 @@ test('shows status when the switch is checked', () => {
 
   const toggle = () => setIsDark(preState => !preState);
 
-  render(<Switch isDark={isDark} onToggle={toggle} />);
+  render(<Switch checked={isDark} onChange={toggle} />);
 
   expect(result.current[0]).toBe(false);
 
@@ -23,4 +23,4 @@ test('shows status when the switch is checked', () => {
   fireEvent.click(screen.getByText('🌜'));
 
   expect(result.current[0]).toBe(true);
-})
+});

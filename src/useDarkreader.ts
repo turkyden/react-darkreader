@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { useUnmount } from 'ahooks';
+import { useState, useEffect, useMemo } from 'react';
 import {
   enable as enableDarkMode,
   disable as disableDarkMode,
@@ -7,12 +6,20 @@ import {
   exportGeneratedCSS as collectCSS,
   setFetchMethod,
 } from 'darkreader';
+import { Result } from 'antd';
 
 export type Options = {
   brightness?: number;
   contrast?: number;
   sepia?: number;
 };
+
+export type Action = {
+  toggle: () => void;
+  collectCSS: () => Promise<string>;
+};
+
+export type Result = [boolean, Action];
 
 const defaultOptions = {
   brightness: 100,
@@ -22,27 +29,28 @@ const defaultOptions = {
 
 export default function useDarkreader(
   defaultDarken: boolean = false,
-  { brightness, contrast, sepia }: Options = defaultOptions,
-): [boolean, () => void, () => Promise<string>] {
+  options: Options = defaultOptions,
+): Result {
   const [isDark, setIsDark] = useState(defaultDarken);
 
   useEffect(() => {
     setFetchMethod(window.fetch);
 
-    isDark
-      ? enableDarkMode({
-          brightness,
-          contrast,
-          sepia,
-        })
-      : disableDarkMode();
+    isDark ? enableDarkMode(options) : disableDarkMode();
+
+    // unmount
+    return () => {
+      disableDarkMode();
+    };
 
     // TODO: followSystemColorScheme();
   }, [isDark]);
 
-  useUnmount(() => {
-    disableDarkMode();
-  });
+  const action = useMemo(() => {
+    const toggle = () => setIsDark(prevState => !prevState);
 
-  return [isDark, () => setIsDark(prevState => !prevState), collectCSS];
+    return { toggle, collectCSS };
+  }, [isDark]);
+
+  return [isDark, action];
 }

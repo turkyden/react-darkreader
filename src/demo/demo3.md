@@ -10,7 +10,7 @@ import React from 'react';
 import { useDarkreader } from 'react-darkreader';
 
 export default () => {
-  const [isDark, toggle] = useDarkreader(false);
+  const [isDark, { toggle }] = useDarkreader(false);
 
   return (
     <button type="button" onClick={toggle}>

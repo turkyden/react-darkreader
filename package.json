@@ -44,13 +44,11 @@
     ]
   },
   "dependencies": {
-    "@types/react-toggle": "^4.0.2",
-    "ahooks": "^2.9.3",
-    "antd": "^4.10.0",
     "darkreader": "^4.9.26",
-    "husky": "^4.3.6",
-    "react": "^16.12.0",
-    "react-toggle": "^4.1.1"
+    "react-switch": "^6.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.9",
@@ -58,9 +56,11 @@
     "@testing-library/react-hooks": "^5.0.3",
     "@types/jest": "^26.0.20",
     "@umijs/test": "^3.0.5",
+    "antd": "^4.12.3",
     "dumi": "^1.0.10",
     "father-build": "^1.17.2",
     "gh-pages": "^3.0.0",
+    "husky": "^5.1.1",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
     "yorkie": "^2.0.0"

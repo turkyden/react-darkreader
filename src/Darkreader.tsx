@@ -11,7 +11,7 @@ export default function Darkreader({
   defaultDarken = false,
   options,
 }: DarkreaderProps) {
-  const [isDark, toggle] = useDarkreader(defaultDarken, options);
+  const [isDark, { toggle }] = useDarkreader(defaultDarken, options);
 
-  return <Switch isDark={isDark} onToggle={toggle} />;
+  return <Switch checked={isDark} onChange={toggle} />;
 }

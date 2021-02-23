@@ -38,9 +38,9 @@ import React from 'react';
 import { Switch, useDarkreader } from 'react-darkreader';
 
 export default () => {
-  const [isDark, toggle] = useDarkreader(false);
+  const [isDark, { toggle }] = useDarkreader(false);
 
-  return <Switch isDark={isDark} onToggle={toggle} />;
+  return <Switch checked={isDark} onChange={toggle} />;
 };
 ```
 
@@ -62,13 +62,13 @@ export default () => {
 ### Hook
 
 ```typescript | pure
-const [isDark, toggle, collectCSS] = useDarkreader(defaultDarken: boolean, options?: Options);
+const [isDark, { toggle, collectCSS }] = useDarkreader(defaultDarken: boolean, options?: Options);
 ```
 
 with a toggle button as ui.
 
 ```tsx | pure
-<Switch isDark={isDark} onToggle={toggle} />
+<Switch checked={isDark} onChange={toggle} />
 ```
 
 ### Result
@@ -95,6 +95,7 @@ with a toggle button as ui.
 
 ## 🔢 Coming Soon
 
+- [x] add the material design styling in switch
 - [ ] followSystemColorScheme
 - [ ] localstorge
 - [ ] playground for editing the config online
