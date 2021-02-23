@@ -1,23 +1,37 @@
-# Getting Started
+<p align="center">
+  <img align="center" alt="react-darkreader" src="https://darkreader.org/images/darkreader-icon-256x256.png" />
+</p>
+<h1 align="center">React Darkreader</h1>
 
-🌓 A React Hook for adding a dark / night mode to your site inspired by [darkreader](https://github.com/darkreader/darkreader)
+---
 
-[![npm](https://img.shields.io/npm/v/react-darkreader?color=orange)](https://www.npmjs.com/package/react-darkreader) ![npm](https://img.shields.io/npm/dt/react-darkreader) [![dumi](https://img.shields.io/badge/docs%20by-dumi-blue)](https://github.com/umijs/dumi) ![License](https://img.shields.io/github/license/Turkyden/react-darkreader) [![jsdelivr](https://data.jsdelivr.com/v1/package/npm/react-darkreader/badge)](https://www.jsdelivr.com/package/npm/react-darkreader)
+<p align="center">🌓 A React Hook for adding a dark / night mode to your site inspired by <a href="https://github.com/darkreader/darkreader" target="_blank">darkreader</a>
+</p>
 
-Live Demo ✨ [https://react-darkreader.vercel.app](https://react-darkreader.vercel.app)
+<p align="center">
+  <a href="https://www.npmjs.com/package/react-darkreader" target="_blank"><img alt="npm" src="https://img.shields.io/npm/v/react-darkreader?color=orange" /></a> <img alt="npm" src="https://img.shields.io/npm/dt/react-darkreader" /> <a href="https://github.com/umijs/dumi" target="_blank"><img alt="dumi" src="https://img.shields.io/badge/docs%20by-dumi-blue" /></a> <img alt="license" src="https://img.shields.io/github/license/Turkyden/react-darkreader" /> <a href="https://www.jsdelivr.com/package/npm/react-darkreader" target="_blank"><img alt="jsdelivr" src="https://data.jsdelivr.com/v1/package/npm/react-darkreader/badge" /></a>
+</p>
 
-![darkreader](https://darkreader.org/images/darkreader-icon-256x256.png)
+<p align="center">Live Demo ✨ <a href="https://react-darkreader.vercel.app" target="_blank">https://react-darkreader.vercel.app</a></p>
 
-## 📦 Install
+## Getting Started
+
+Install with yarn
 
 ```bash
 yarn add react-darkreader
 ```
 
-Or you can:
+Or you can
 
 ```bash
 npm install react-darkreader
+```
+
+Or inject the script at your page by [jsdelivr CDN](https://www.jsdelivr.com/)
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/react-darkreader@latest/dist/index.min.js"></script>
 ```
 
 ## 🚀 Usage
@@ -130,7 +144,7 @@ $ npm run build
 
 Thanks goes to these people (emoji key):
 
-<table>
+<table style="width: auto">
   <tr>
     <td align="center">
       <a href="https://github.com/Turkyden">
@@ -145,7 +159,7 @@ Thanks goes to these people (emoji key):
         📖
     </td>
   </tr>
-</table>  
+</table>
 
 ## License
 
