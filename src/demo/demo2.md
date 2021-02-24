@@ -6,11 +6,28 @@ You can set the defaultDarken properties to control status at first time.
 /**
  * defaultShowCode: true
  */
-import React from 'react';
+import React, { useState } from 'react';
 import Darkreader from 'react-darkreader';
 
 export default () => {
-  return <Darkreader defaultDarken />;
+  const [message, setMessage] = useState('Current theme mode is what');
+
+  return (
+    <>
+      <Darkreader
+        defaultDarken
+        options={{
+          brightness: 100,
+          contrast: 90,
+          sepia: 10
+        }}
+        onChange={isDark => setMessage(`Current theme mode is ${ isDark ? '🌜' : '🌞' }`) }
+      />
+      <br/>
+      <br/>
+      <p>{message}</p>
+    </>
+  );
 };
 ```
 
