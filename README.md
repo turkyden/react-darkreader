@@ -63,13 +63,10 @@ export default () => {
 ```tsx | pure
 <Darkreader
   defaultDarken
-  options={{
-    brightness: 100,
-    contrast: 90,
-    sepia: 10,
-  }}
+  theme={/** Theme options **/}
+  fixes={/** Contains fixes for the generated theme **/}
   onChange={isDark => {
-    /** todo **/
+    /** Callback for change **/
   }}
 />
 ```
@@ -77,7 +74,7 @@ export default () => {
 ### Hook
 
 ```typescript | pure
-const [isDark, { toggle, collectCSS }] = useDarkreader(defaultDarken: boolean, options?: Options);
+const [isDark, { toggle, collectCSS }] = useDarkreader(defaultDarken, theme?, fixes?)
 ```
 
 with a toggle button as ui.
@@ -96,17 +93,11 @@ with a toggle button as ui.
 
 ### Params
 
-| Params        | Description                          | Type      | Default |
-| ------------- | ------------------------------------ | --------- | ------- |
-| defaultDarken | The default status of the darkreader | `boolean` | false   |
-
-### Options
-
-| Params     | Description                           | Type     | Default |
-| ---------- | ------------------------------------- | -------- | ------- |
-| brightness | The brightness properties of darkmode | `number` | 100     |
-| contrast   | The contrast properties of darkmode   | `number` | 90      |
-| sepia      | The sepia properties of darkmode      | `number` | 10      |
+| Params        | Description                                                                                                                                                                   | Type              | Default |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | ------- |
+| defaultDarken | The default status of the darkreader                                                                                                                                          | `boolean`         | false   |
+| theme         | The options of darkreader Theme [refered to index.d.ts &rarr;](https://github.com/darkreader/darkreader/blob/13c93a995cde0b933580174106897bb1d13f53b4/index.d.ts#L41)         | `Partial<Theme>`  | -       |
+| fixes         | Contains fixes for the generated theme [refered to index.d.ts &rarr;](https://github.com/darkreader/darkreader/blob/13c93a995cde0b933580174106897bb1d13f53b4/index.d.ts#L121) | `DynamicThemeFix` | -       |
 
 ## 🔢 Coming Soon
 

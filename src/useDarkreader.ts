@@ -19,14 +19,20 @@ export type Result = [boolean, Action];
 
 export type DarkreaderTheme = Partial<Theme>;
 
-export type DarkreaderFix = DynamicThemeFix;
+export type DarkreaderFixes = DynamicThemeFix;
 
 export default function useDarkreader(
   defaultDarken: boolean = false,
-  theme: DarkreaderTheme,
-  fixes?: DarkreaderFix,
+  theme?: DarkreaderTheme,
+  fixes?: DarkreaderFixes,
 ): Result {
   const [isDark, setIsDark] = useState(defaultDarken);
+
+  const defaultTheme = {
+    brightness: 100,
+    contrast: 90,
+    sepia: 10,
+  };
 
   const defaultFixes = {
     invert: [],
@@ -39,7 +45,10 @@ export default function useDarkreader(
     setFetchMethod(window.fetch);
 
     isDark
-      ? enableDarkMode(theme, { ...defaultFixes, ...fixes })
+      ? enableDarkMode(
+          { ...defaultTheme, ...theme },
+          { ...defaultFixes, ...fixes },
+        )
       : disableDarkMode();
 
     // unmount

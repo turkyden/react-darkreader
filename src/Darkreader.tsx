@@ -1,19 +1,24 @@
 import React from 'react';
-import useDarkreader, { Options } from './useDarkreader';
+import useDarkreader, {
+  DarkreaderTheme,
+  DarkreaderFixes,
+} from './useDarkreader';
 import Switch from './Switch';
 
 export interface DarkreaderProps {
   defaultDarken?: boolean;
-  options?: Options;
+  theme?: DarkreaderTheme;
+  fixes?: DarkreaderFixes;
   onChange?: (checked: boolean) => void;
 }
 
 export default function Darkreader({
   defaultDarken = false,
-  options,
+  theme,
+  fixes,
   onChange,
 }: DarkreaderProps) {
-  const [isDark, { toggle }] = useDarkreader(defaultDarken, options);
+  const [isDark, { toggle }] = useDarkreader(defaultDarken, theme, fixes);
 
   return (
     <Switch

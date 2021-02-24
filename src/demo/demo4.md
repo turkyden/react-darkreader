@@ -44,7 +44,7 @@ export default () => {
 
 ### API
 
-Please Refer to the [https://github.com/markusenglund/react-switch](https://github.com/markusenglund/react-switch).
+Please Refer to the 📦 [markusenglund/react-switch](https://github.com/markusenglund/react-switch).
 
 | Prop                                  | Type              | Default                                                                                  | Description                                                                                                                                                                                                               |
 | ------------------------------------- | ----------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -67,5 +67,3 @@ Please Refer to the [https://github.com/markusenglund/react-switch](https://gith
 | className                             | string            | _undefined_                                                                              | Set as the className of the outer shell of the switch. Useful for positioning the switch.                                                                                                                                 |
 | borderRadius                          | number            | _undefined_                                                                              | Border radius of the switch _and_ the handle.                                                                                                                                                                             |
 | id                                    | string            | _undefined_                                                                              | Set as an attribute to the embedded checkbox. This is useful for the associated label, which can point to the id in its htmlFor attribute.                                                                                |
-
----
