@@ -63,11 +63,12 @@ export default () => {
 ```tsx | pure
 <Darkreader
   defaultDarken
-  options={
+  options={{
     brightness: 100,
     contrast: 90,
     sepia: 10
-  }
+  }}
+  onChange={isDark => { /** todo **/ }}
 />
 ```
 
