@@ -16,30 +16,6 @@ export default () => {
 };
 ```
 
-Or you can import the switch trigger from [Ant Design](https://ant.design/components/switch-cn/)
-
-```tsx
-/**
- * defaultShowCode: true
- */
-import React from 'react';
-import { useDarkreader } from 'react-darkreader';
-import { Switch } from 'antd';
-
-export default () => {
-  const [isDark, { toggle }] = useDarkreader(false);
-
-  return (
-    <>
-      <Switch checked={isDark} onChange={toggle} />
-      <br />
-      <br />
-      <Switch checked={isDark} onChange={toggle} size="small" />
-    </>
-  );
-};
-```
-
 You can also define your toggler ui style with `styling` in props.
 
 ```tsx
@@ -54,12 +30,13 @@ export default () => {
 
   return (
     <>
-      <Switch checked={isDark} onChange={toggle} />
-      <p>default</p>
       <Switch checked={isDark} onChange={toggle} styling="docusaurus" />
       <p>docusaurus</p>
+      <Switch checked={isDark} onChange={toggle} styling="github" />
+      <p>github</p>
       <Switch checked={isDark} onChange={toggle} styling="material" />
       <p>material</p>
+      <p>... coming soon</p>
     </>
   );
 };

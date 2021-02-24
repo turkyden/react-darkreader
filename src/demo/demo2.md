@@ -16,15 +16,17 @@ export default () => {
     <>
       <Darkreader
         defaultDarken
-        options={{
+        theme={{
           brightness: 100,
           contrast: 90,
-          sepia: 10
+          sepia: 10,
         }}
-        onChange={isDark => setMessage(`Current theme mode is ${ isDark ? '🌜' : '🌞' }`) }
+        onChange={isDark =>
+          setMessage(`Current theme mode is ${isDark ? '🌜' : '🌞'}`)
+        }
       />
-      <br/>
-      <br/>
+      <br />
+      <br />
       <p>{message}</p>
     </>
   );
