@@ -66,9 +66,11 @@ export default () => {
   options={{
     brightness: 100,
     contrast: 90,
-    sepia: 10
+    sepia: 10,
   }}
-  onChange={isDark => { /** todo **/ }}
+  onChange={isDark => {
+    /** todo **/
+  }}
 />
 ```
 
@@ -150,6 +152,12 @@ Thanks goes to these people (emoji key):
         <img src="https://avatars0.githubusercontent.com/u/24560160?s=460&u=36a6072b8220e6ad7c0c7f7dbf97cc3dd796a8d0&v=4" width="100px;" alt=""/><br />
         <sub><b>Turkyden</b></sub></a><br />
         💻📖🚇⚠️
+    </td>
+    <td align="center">
+      <a href="https://github.com/chenshuai2144">
+        <img src="https://avatars.githubusercontent.com/u/8186664?s=460&u=a583e7221b1be534d587185223cab48fe47cb74d&v=4" width="100px;" alt=""/><br />
+        <sub><b>chenshuai2144</b></sub></a><br />
+        💻🚇⚠️
     </td>
     <td align="center">
       <a href="https://github.com/KnowsCount">
