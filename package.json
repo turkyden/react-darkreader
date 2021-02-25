@@ -1,6 +1,6 @@
 {
   "name": "react-darkreader",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "A React Hook for adding a dark / night mode to your site inspired by darkreader",
   "keywords": [
     "react",
@@ -33,7 +33,7 @@
     "pre-commit": "lint-staged"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "lint-staged": {
     "*.{js,jsx,less,md,json}": [
