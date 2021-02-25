@@ -8,3 +8,20 @@ body{
   justify-content: center;
   align-items: center;
 }
+
+.react-switch-github__light > .react-switch-bg{
+  border: 3px solid #d1d5da;
+}
+
+.react-switch-github__dark > .react-switch-bg{
+  border: 3px solid #3c1e70;
+}
+
+.react-switch-fluent__light > .react-switch-bg{
+  border: 1px solid #605e5c;
+}
+
+.react-switch-fluent__dark > .react-switch-bg{
+  border: 1px solid #0078d4;
+}
+

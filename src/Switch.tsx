@@ -2,7 +2,7 @@ import React from 'react';
 import ReactSwitch, { ReactSwitchProps } from 'react-switch';
 import './Switch.css';
 export interface SwitchProps extends ReactSwitchProps {
-  styling?: 'docusaurus' | 'material' | 'github';
+  styling?: 'docusaurus' | 'material' | 'github' | 'fluent';
 }
 
 export default function Switch(SwitchProps: SwitchProps) {
@@ -12,6 +12,8 @@ export default function Switch(SwitchProps: SwitchProps) {
     return <MaterialSwitch {...SwitchProps} />;
   } else if (SwitchProps.styling === 'github') {
     return <GithubSwitch {...SwitchProps} />;
+  } else if (SwitchProps.styling === 'fluent') {
+    return <FluentSwitch {...SwitchProps} />;
   } else {
     return <DocusaurusSwitch {...SwitchProps} />;
   }
@@ -20,7 +22,7 @@ export default function Switch(SwitchProps: SwitchProps) {
 function DocusaurusSwitch(reactSwitchProps: ReactSwitchProps) {
   return (
     <ReactSwitch
-      className="react-switch-docusaurus"
+      className="react-switch react-switch-docusaurus"
       handleDiameter={20}
       onColor="#4d4d4d"
       offColor="#4d4d4d"
@@ -40,9 +42,9 @@ function DocusaurusSwitch(reactSwitchProps: ReactSwitchProps) {
 function MaterialSwitch(reactSwitchProps: ReactSwitchProps) {
   return (
     <ReactSwitch
-      className="react-switch-material"
-      onColor="#2c89a0"
-      onHandleColor="#2c89a0"
+      className="react-switch react-switch-material"
+      onColor="#ee80a7"
+      onHandleColor="#dc004e"
       handleDiameter={18}
       uncheckedIcon={false}
       checkedIcon={false}
@@ -76,7 +78,9 @@ function GithubSwitch(reactSwitchProps: ReactSwitchProps) {
   );
   return (
     <ReactSwitch
-      className="react-switch-github"
+      className={`react-switch react-switch-github react-switch-github__${
+        reactSwitchProps?.checked ? 'dark' : 'light'
+      }`}
       onColor="#271052"
       offColor="#ffffff"
       onHandleColor="#6e40c9"
@@ -90,6 +94,27 @@ function GithubSwitch(reactSwitchProps: ReactSwitchProps) {
       activeBoxShadow="0px 0px 1px 4px rgba(0, 0, 0, 0.2)"
       height={24}
       width={42}
+      {...reactSwitchProps}
+    />
+  );
+}
+
+function FluentSwitch(reactSwitchProps: ReactSwitchProps) {
+  return (
+    <ReactSwitch
+      className={`react-switch react-switch-fluent react-switch-fluent__${
+        reactSwitchProps?.checked ? 'dark' : 'light'
+      }`}
+      handleDiameter={12}
+      onColor="#0078d4"
+      offColor="#ffffff"
+      onHandleColor="#ffffff"
+      offHandleColor="#605e5c"
+      activeBoxShadow="0 0 2px 3px #2c89a0"
+      width={40}
+      height={20}
+      uncheckedIcon={false}
+      checkedIcon={false}
       {...reactSwitchProps}
     />
   );

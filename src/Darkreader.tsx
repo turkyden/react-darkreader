@@ -1,14 +1,12 @@
 import React from 'react';
-import useDarkreader, {
-  DarkreaderTheme,
-  DarkreaderFixes,
-} from './useDarkreader';
+import { Theme, DynamicThemeFix } from 'darkreader';
+import useDarkreader from './useDarkreader';
 import Switch from './Switch';
 
 export interface DarkreaderProps {
   defaultDarken?: boolean;
-  theme?: DarkreaderTheme;
-  fixes?: DarkreaderFixes;
+  theme?: Partial<Theme>;
+  fixes?: DynamicThemeFix;
   onChange?: (checked: boolean) => void;
 }
 

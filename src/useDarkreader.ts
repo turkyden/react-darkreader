@@ -17,14 +17,10 @@ export type Action = {
 
 export type Result = [boolean, Action];
 
-export type DarkreaderTheme = Partial<Theme>;
-
-export type DarkreaderFixes = DynamicThemeFix;
-
 export default function useDarkreader(
   defaultDarken: boolean = false,
-  theme?: DarkreaderTheme,
-  fixes?: DarkreaderFixes,
+  theme?: Partial<Theme>,
+  fixes?: DynamicThemeFix,
 ): Result {
   const [isDark, setIsDark] = useState(defaultDarken);
 

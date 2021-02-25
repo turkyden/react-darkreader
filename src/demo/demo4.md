@@ -31,15 +31,25 @@ export default () => {
   return (
     <>
       <Switch checked={isDark} onChange={toggle} styling="docusaurus" />
-      <p>docusaurus</p>
-      <Switch checked={isDark} onChange={toggle} styling="github" />
-      <p>github</p>
+      <p>Facebook Docusaurus</p>
+      <Switch checked={isDark} onChange={toggle} styling="fluent" />
+      <p>Microsoft Fluent UI</p>
       <Switch checked={isDark} onChange={toggle} styling="material" />
-      <p>material</p>
-      <p>... coming soon</p>
+      <p>Google Material Design</p>
+      <Switch checked={isDark} onChange={toggle} styling="github" />
+      <p>Github</p>
+      <p>...</p>
     </>
   );
 };
+```
+
+All styling of Switch
+
+```ts | pure
+interface SwitchProps extends ReactSwitchProps {
+  styling?: 'docusaurus' | 'material' | 'fluent' | 'github';
+}
 ```
 
 ### API
