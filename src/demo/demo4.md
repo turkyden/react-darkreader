@@ -16,30 +16,6 @@ export default () => {
 };
 ```
 
-Or you can import the switch trigger from [Ant Design](https://ant.design/components/switch-cn/)
-
-```tsx
-/**
- * defaultShowCode: true
- */
-import React from 'react';
-import { useDarkreader } from 'react-darkreader';
-import { Switch } from 'antd';
-
-export default () => {
-  const [isDark, { toggle }] = useDarkreader(false);
-
-  return (
-    <>
-      <Switch checked={isDark} onChange={toggle} />
-      <br />
-      <br />
-      <Switch checked={isDark} onChange={toggle} size="small" />
-    </>
-  );
-};
-```
-
 You can also define your toggler ui style with `styling` in props.
 
 ```tsx
@@ -54,20 +30,31 @@ export default () => {
 
   return (
     <>
-      <Switch checked={isDark} onChange={toggle} />
-      <p>default</p>
       <Switch checked={isDark} onChange={toggle} styling="docusaurus" />
-      <p>docusaurus</p>
+      <p>Facebook Docusaurus</p>
+      <Switch checked={isDark} onChange={toggle} styling="fluent" />
+      <p>Microsoft Fluent UI</p>
       <Switch checked={isDark} onChange={toggle} styling="material" />
-      <p>material</p>
+      <p>Google Material Design</p>
+      <Switch checked={isDark} onChange={toggle} styling="github" />
+      <p>Github</p>
+      <p>...</p>
     </>
   );
 };
 ```
 
+All styling of Switch
+
+```ts | pure
+interface SwitchProps extends ReactSwitchProps {
+  styling?: 'docusaurus' | 'material' | 'fluent' | 'github';
+}
+```
+
 ### API
 
-Please Refer to the [https://github.com/markusenglund/react-switch](https://github.com/markusenglund/react-switch).
+Please Refer to the 📦 [markusenglund/react-switch](https://github.com/markusenglund/react-switch).
 
 | Prop                                  | Type              | Default                                                                                  | Description                                                                                                                                                                                                               |
 | ------------------------------------- | ----------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -90,5 +77,3 @@ Please Refer to the [https://github.com/markusenglund/react-switch](https://gith
 | className                             | string            | _undefined_                                                                              | Set as the className of the outer shell of the switch. Useful for positioning the switch.                                                                                                                                 |
 | borderRadius                          | number            | _undefined_                                                                              | Border radius of the switch _and_ the handle.                                                                                                                                                                             |
 | id                                    | string            | _undefined_                                                                              | Set as an attribute to the embedded checkbox. This is useful for the associated label, which can point to the id in its htmlFor attribute.                                                                                |
-
----

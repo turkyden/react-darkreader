@@ -5,14 +5,10 @@ import {
   auto as followSystemColorScheme,
   exportGeneratedCSS as collectCSS,
   setFetchMethod,
+  Theme,
+  DynamicThemeFix,
 } from 'darkreader';
 import { Result } from 'antd';
-
-export type Options = {
-  brightness?: number;
-  contrast?: number;
-  sepia?: number;
-};
 
 export type Action = {
   toggle: () => void;
@@ -21,22 +17,35 @@ export type Action = {
 
 export type Result = [boolean, Action];
 
-const defaultOptions = {
-  brightness: 100,
-  contrast: 90,
-  sepia: 10,
-};
-
 export default function useDarkreader(
   defaultDarken: boolean = false,
-  options: Options = defaultOptions,
+  theme?: Partial<Theme>,
+  fixes?: DynamicThemeFix,
 ): Result {
   const [isDark, setIsDark] = useState(defaultDarken);
+
+  const defaultTheme = {
+    brightness: 100,
+    contrast: 90,
+    sepia: 10,
+  };
+
+  const defaultFixes = {
+    invert: [],
+    css: '',
+    ignoreInlineStyle: ['.react-switch-handle'],
+    ignoreImageAnalysis: [],
+  };
 
   useEffect(() => {
     setFetchMethod(window.fetch);
 
-    isDark ? enableDarkMode(options) : disableDarkMode();
+    isDark
+      ? enableDarkMode(
+          { ...defaultTheme, ...theme },
+          { ...defaultFixes, ...fixes },
+        )
+      : disableDarkMode();
 
     // unmount
     return () => {
