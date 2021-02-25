@@ -10,10 +10,7 @@
     "darkmode"
   ],
   "homepage": "http://github.com/Turkyden/react-darkreader",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Turkyden/react-darkreader.git"
-  },
+  "repository": "git://github.com/Turkyden/react-darkreader.git",
   "bugs": {
     "url": "http://github.com/Turkyden/react-darkreader/issues"
   },
@@ -34,6 +31,9 @@
   "typings": "dist/index.d.ts",
   "gitHooks": {
     "pre-commit": "lint-staged"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   },
   "lint-staged": {
     "*.{js,jsx,less,md,json}": [
