@@ -2,11 +2,20 @@ body{
   color: rgba(0, 0, 0, 0.85);
   background-color: #fff;
 }
-.react-switch-icon{
-  height: 100%;
+
+.react-switch .react-switch-icon{
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+}
+
+.react-switch-docusaurus .react-switch-icon{
+  font-size: 14px;
+}
+
+.react-switch > .react-switch-bg{
+  box-sizing: border-box;
 }
 
 .react-switch-github__light > .react-switch-bg{
