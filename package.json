@@ -14,9 +14,9 @@
     "email": "wj871287@gmail.com"
   },
   "homepage": "http://github.com/Turkyden/react-darkreader",
-  "repository": "https://github.com/Turkyden/react-darkreader",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.com/"
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Turkyden/react-darkreader.git"
   },
   "bugs": {
     "url": "http://github.com/Turkyden/react-darkreader/issues"
@@ -36,9 +36,6 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
   "files": [
     "dist",
     "lib",
@@ -47,6 +44,9 @@
     "README.md",
     "LICENSE"
   ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
   "lint-staged": {
     "*.{js,jsx,less,md,json}": [
       "prettier --write"
