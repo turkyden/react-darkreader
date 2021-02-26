@@ -9,10 +9,14 @@
     "darkreader",
     "darkmode"
   ],
+  "authors": {
+    "name": "Turkyden",
+    "email": "wj871287@gmail.com"
+  },
   "homepage": "http://github.com/Turkyden/react-darkreader",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Turkyden/react-darkreader.git"
+  "repository": "https://github.com/Turkyden/react-darkreader",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/"
   },
   "bugs": {
     "url": "http://github.com/Turkyden/react-darkreader/issues"
@@ -35,6 +39,14 @@
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
   "lint-staged": {
     "*.{js,jsx,less,md,json}": [
       "prettier --write"
