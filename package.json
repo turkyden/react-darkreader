@@ -1,5 +1,5 @@
 {
-  "name": "@Turkyden/react-darkreader",
+  "name": "react-darkreader",
   "version": "1.4.6",
   "description": "A React Hook for adding a dark / night mode to your site inspired by darkreader",
   "keywords": [
@@ -11,7 +11,8 @@
   ],
   "homepage": "http://github.com/Turkyden/react-darkreader",
   "repository": {
-    "url": "git://github.com/Turkyden/react-darkreader.git"
+    "type": "git",
+    "url": "git@github.com:Turkyden/react-darkreader.git"
   },
   "bugs": {
     "url": "http://github.com/Turkyden/react-darkreader/issues"
@@ -33,9 +34,6 @@
   "typings": "dist/index.d.ts",
   "gitHooks": {
     "pre-commit": "lint-staged"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "lint-staged": {
     "*.{js,jsx,less,md,json}": [
