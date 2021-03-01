@@ -4,8 +4,8 @@
 /node_modules
 /npm-debug.log*
 /yarn-error.log
-/yarn.lock
-/package-lock.json
+# /yarn.lock
+# /package-lock.json
 
 # production
 /dist
