@@ -3,10 +3,10 @@ name: Publish Package & Github Pages When Push Master
 on:
   pull_request:
     branches:
-      - master
+      - main
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
