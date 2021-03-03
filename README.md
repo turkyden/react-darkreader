@@ -1,3 +1,5 @@
+English | [简体中文](./README_cn-zh.md)
+
 <p align="center">
   <img align="center" alt="react-darkreader" src="https://darkreader.org/images/darkreader-icon-256x256.png" />
 </p>

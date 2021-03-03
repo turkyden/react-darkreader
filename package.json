@@ -31,7 +31,8 @@
     "release": "npm run build && npm publish",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
-    "test:coverage": "umi-test --coverage"
+    "test:coverage": "umi-test --coverage",
+    "commit": "cz"
   },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -55,6 +56,11 @@
       "prettier --parser=typescript --write"
     ]
   },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
   "dependencies": {
     "darkreader": "^4.9.26",
     "react-switch": "^6.0.0"
@@ -72,6 +78,7 @@
     "dumi": "^1.0.10",
     "father-build": "^1.17.2",
     "gh-pages": "^3.0.0",
+    "git-cz": "^4.7.6",
     "husky": "^5.1.1",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
