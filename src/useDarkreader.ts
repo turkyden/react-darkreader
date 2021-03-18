@@ -21,6 +21,7 @@ export default function useDarkreader(
   defaultDarken: boolean = false,
   theme?: Partial<Theme>,
   fixes?: DynamicThemeFix,
+  onEnd?: () => void,
 ): Result {
   const [isDark, setIsDark] = useState(defaultDarken);
 
@@ -46,6 +47,8 @@ export default function useDarkreader(
           { ...defaultFixes, ...fixes },
         )
       : disableDarkMode();
+
+    onEnd && onEnd();
 
     // unmount
     return () => {
