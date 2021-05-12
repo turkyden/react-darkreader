@@ -150,7 +150,9 @@ Thanks goes to these people:
 
 Please Feel free to enjoy and participate in open source!
 
-## Stargazers
+## ⭐ Stargazers
+
+Thanks for your star!
 
 [![Stargazers repo roster for @Turkyden/react-darkreader](https://reporoster.com/stars/Turkyden/react-darkreader)](https://github.com/Turkyden/react-darkreader/stargazers)
 
